@@ -1,0 +1,13 @@
+﻿[Panel2]
+Coordinates=75,10,55,58
+
+[Panel1]
+Coordinates=10,10,55,58
+
+[]
+Coordinates=148,1,91,36
+
+[DBGrid2]
+Coordinates=140,10,64,36
+Visible=True
+
