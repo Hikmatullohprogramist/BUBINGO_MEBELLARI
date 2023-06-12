@@ -307,6 +307,9 @@ __published: // IDE-managed Components
 	TPopupMenu *PopupMenu1;
 	TMenuItem *S1;
 	TLabel *Label69;
+	TPanel *Panel53;
+	TLabel *Label70;
+	TLabel *Label71;
 
 	void __fastcall DBGrid2CellClick(TColumn *Column);
 	void __fastcall SearchBox1Change(TObject *Sender);

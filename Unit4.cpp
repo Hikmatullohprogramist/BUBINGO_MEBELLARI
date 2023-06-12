@@ -555,7 +555,7 @@ void __fastcall TForm4::SBOKClick(TObject *Sender) {
 	float foiz = StrToFloat(Label69->Caption);
 
 	price = tan_narx * foiz / 100;
-	int status_id = Label69->Tag;
+	// int status_id = IntToStr(Label69->Caption);
 
 	if (Form1->product_infoQuery->RecordCount != 0) {
 		if (store_amount > 0) {
@@ -569,7 +569,9 @@ void __fastcall TForm4::SBOKClick(TObject *Sender) {
 
 				Form1->sellQuery->FieldByName("amount")->Text =
 					Form1->sellQuery->FieldByName("amount")->AsInteger + 1;
-				Form1->sellQuery->FieldByName("allprice")->Text = Form1->sellQuery->FieldByName("price")->Text * Form1->sellQuery->FieldByName("amount")->Text;
+				Form1->sellQuery->FieldByName("allprice")->Text =
+					Form1->sellQuery->FieldByName("price")
+					->Text * Form1->sellQuery->FieldByName("amount")->Text;
 				Form1->sellQuery->Post();
 
 				Form1->product_infoQuery->Edit();
@@ -609,8 +611,8 @@ void __fastcall TForm4::SBOKClick(TObject *Sender) {
 					debt = StringReplace(debt, " ", "",
 						TReplaceFlags() << rfReplaceAll);
 					Form1->sellQuery->FieldByName("old_debt")->Text = debt;
-					Form1->sellQuery->FieldByName("status_id")->Text =
-						status_id;
+					Form1->sellQuery->FieldByName("foiz")->Text = foiz;
+					Form1->sellQuery->FieldByName("tan_narx")->Text = tan_narx;
 					Form1->sellQuery->Post();
 
 					Form1->product_infoQuery->Edit();
@@ -1074,6 +1076,10 @@ void __fastcall TForm4::SavdoSotishClick(TObject *Sender) {
 		Form1->buyersQuery->Post();
 		// }
 
+
+
+
+
 		for (int i = 0; i < Form1->sellQuery->RecordCount; i++) {
 			Form1->sellingQuery->Insert();
 			Form1->sellingQuery->FieldByName("name")->Text =
@@ -1082,10 +1088,7 @@ void __fastcall TForm4::SavdoSotishClick(TObject *Sender) {
 				Form1->sellQuery->FieldByName("amount")->Text;
 			Form1->sellingQuery->FieldByName("price")->Text =
 				Form1->sellQuery->FieldByName("price")->Text;
-			Form1->sellingQuery->FieldByName("allprice")->Text =
-				Form1->sellQuery->FieldByName("price")
-				->AsInteger * Form1->sellQuery->FieldByName("amount")
-				->AsInteger;
+			Form1->sellingQuery->FieldByName("allprice")->Text = Form1->sellQuery->FieldByName("price")->Text * Form1->sellQuery->FieldByName("amount")->Text;
 			Form1->sellingQuery->FieldByName("bar_code")->Text =
 				Form1->sellQuery->FieldByName("bar_code")->Text;
 			Form1->sellingQuery->FieldByName("chek_id")->Text = chek_id;
@@ -1106,8 +1109,10 @@ void __fastcall TForm4::SavdoSotishClick(TObject *Sender) {
 			Form1->sellingQuery->FieldByName("month")->Text = CCalendar1->Month;
 			Form1->sellingQuery->FieldByName("buyer")->Text =
 				CBHaridorlar->Text;
-			Form1->sellingQuery->FieldByName("status_id")->Text =
-				Form1->sellQuery->FieldByName("status_id")->Text;
+			Form1->sellingQuery->FieldByName("foiz")->Text =
+				Form1->sellQuery->FieldByName("foiz")->Text;
+			Form1->sellingQuery->FieldByName("tan_narx")->Text =
+				Form1->sellQuery->FieldByName("tan_narx")->Text;
 			Form1->sellingQuery->Post();
 			Form1->sellQuery->Next();
 		}

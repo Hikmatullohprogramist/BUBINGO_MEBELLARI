@@ -1275,8 +1275,8 @@ object Form4: TForm4
           object Label69: TLabel
             Left = 222
             Top = 6
-            Width = 16
-            Height = 27
+            Width = 14
+            Height = 30
             Caption = '0'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
@@ -2975,7 +2975,7 @@ object Form4: TForm4
         Width = 746
         Height = 719
         Align = alRight
-        ActiveCard = haridorlar
+        ActiveCard = sotilganlar
         Caption = 'CardPanel2'
         TabOrder = 1
         object sotilganlar: TCard
@@ -3190,15 +3190,16 @@ object Form4: TForm4
             TabOrder = 4
             object Panel19: TPanel
               AlignWithMargins = True
-              Left = 514
+              Left = 620
               Top = 4
-              Width = 226
+              Width = 120
               Height = 92
               Align = alRight
+              AutoSize = True
               TabOrder = 0
               object Label30: TLabel
                 AlignWithMargins = True
-                Left = 108
+                Left = 4
                 Top = 5
                 Width = 112
                 Height = 24
@@ -3212,7 +3213,7 @@ object Form4: TForm4
                 ParentFont = False
               end
               object lprice: TLabel
-                Left = 191
+                Left = 87
                 Top = 35
                 Width = 26
                 Height = 29
@@ -3228,20 +3229,21 @@ object Form4: TForm4
             end
             object Panel20: TPanel
               AlignWithMargins = True
-              Left = 292
+              Left = 527
               Top = 4
-              Width = 216
+              Width = 87
               Height = 92
               Align = alRight
+              AutoSize = True
               TabOrder = 1
               object Label17: TLabel
                 AlignWithMargins = True
-                Left = 94
+                Left = 4
                 Top = 5
-                Width = 116
+                Width = 79
                 Height = 24
                 Alignment = taRightJustify
-                Caption = 'Jami tovarlar'
+                Caption = 'Tan narx'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -20
@@ -3250,7 +3252,46 @@ object Form4: TForm4
                 ParentFont = False
               end
               object lamount: TLabel
-                Left = 178
+                Left = 51
+                Top = 35
+                Width = 30
+                Height = 33
+                Alignment = taRightJustify
+                Caption = '00'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -27
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+              end
+            end
+            object Panel53: TPanel
+              AlignWithMargins = True
+              Left = 460
+              Top = 4
+              Width = 61
+              Height = 92
+              Align = alRight
+              AutoSize = True
+              TabOrder = 2
+              object Label70: TLabel
+                AlignWithMargins = True
+                Left = 4
+                Top = 5
+                Width = 53
+                Height = 24
+                Alignment = taRightJustify
+                Caption = 'Foyda'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -20
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+              end
+              object Label71: TLabel
+                Left = 25
                 Top = 35
                 Width = 30
                 Height = 33

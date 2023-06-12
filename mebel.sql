@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : Base
+Source Server         : data
 Source Server Version : 50530
 Source Host           : localhost:3306
 Source Database       : mebel
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50530
 File Encoding         : 65001
 
-Date: 2023-06-08 17:31:14
+Date: 2023-06-12 13:57:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `accounts_payble` (
   `payment_date` date DEFAULT NULL,
   `price` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of accounts_payble
@@ -74,6 +74,9 @@ INSERT INTO `accounts_payble` VALUES ('39', '17', '177', '2023-02-12', '2022-12-
 INSERT INTO `accounts_payble` VALUES ('40', '17', '178', '2023-02-12', '2022-12-24', '990000');
 INSERT INTO `accounts_payble` VALUES ('41', '39', '179', '2023-05-24', '2022-12-24', '0');
 INSERT INTO `accounts_payble` VALUES ('42', '9', '180', '2023-06-06', '2022-12-24', '50215');
+INSERT INTO `accounts_payble` VALUES ('43', '12', '181', '2023-06-09', '2022-12-24', '77306');
+INSERT INTO `accounts_payble` VALUES ('44', '17', '182', '2023-06-10', '2022-12-24', '77306');
+INSERT INTO `accounts_payble` VALUES ('45', '17', '183', '2023-06-10', '2022-12-24', '77306');
 
 -- ----------------------------
 -- Table structure for `bar_code`
@@ -89,7 +92,7 @@ CREATE TABLE `bar_code` (
 -- ----------------------------
 -- Records of bar_code
 -- ----------------------------
-INSERT INTO `bar_code` VALUES ('1', '777000365', '180');
+INSERT INTO `bar_code` VALUES ('1', '777000365', '183');
 
 -- ----------------------------
 -- Table structure for `brak`
@@ -137,11 +140,11 @@ CREATE TABLE `buyers` (
 -- ----------------------------
 INSERT INTO `buyers` VALUES ('9', 'Abduraxim po`lsha bozor', '+998 90 633-97-32', '4515000', null, '24793216', '2022-12-24', '1');
 INSERT INTO `buyers` VALUES ('11', 'Elyorbe po`lsha bozor tashqari', '+998 99 978-04-00', '6755000', null, '7961000', '2022-12-24', '2');
-INSERT INTO `buyers` VALUES ('12', 'Srojiddin aka rishton ', '+998 99 934-78-71', '3725000', null, '4925000', '2022-12-24', '1');
+INSERT INTO `buyers` VALUES ('12', 'Srojiddin aka rishton ', '+998 99 934-78-71', '3725000', null, '5002306', '2022-12-24', '1');
 INSERT INTO `buyers` VALUES ('13', 'Sherali Aka bog`di oldi ', '+998 99 721-93-15', '0', null, '12195000', '2022-12-24', '2');
 INSERT INTO `buyers` VALUES ('14', 'Quvonch aka po`lsha ', '+998 90 777-26-27', '2010000', null, '7795000', '2022-12-24', '1');
 INSERT INTO `buyers` VALUES ('16', 'Fozilxon namangan', '+998 91 351-78-48', null, null, '21690000', '2022-12-24', '2');
-INSERT INTO `buyers` VALUES ('17', 'Xayrullo aka vadl ', '+998 91 123-90-45', null, null, '1690000', '2022-12-24', '1');
+INSERT INTO `buyers` VALUES ('17', 'Xayrullo aka vadl ', '+998 91 123-90-45', null, null, '1844612', '2022-12-24', '1');
 INSERT INTO `buyers` VALUES ('18', 'Doston taxta bozor ', '+998 90 633-27-43', null, null, '8275000', '2022-12-24', '2');
 INSERT INTO `buyers` VALUES ('19', 'Nodiraka sklad beshbola', '+998 90 161-85-80', null, null, '38845000', '2022-12-24', '1');
 INSERT INTO `buyers` VALUES ('21', 'Raxmattilo', '+998 99 996-99-66', null, null, '415000', '2022-12-24', '2');
@@ -1588,7 +1591,7 @@ INSERT INTO `product_info` VALUES ('322', 'sAS<DMN<SAMn', '2121', '2121', '19-05
 INSERT INTO `product_info` VALUES ('323', 'TEST_TOVAR', '100x10x10', 'OQ', '20-05-2023', '777000330', 'Admin', ' shurup qora shurup qora shurup qora shurup qora shurup qora', '123695', '1', '101', '11051672', null, '10', 'eko kerama 0112 ikki eshikli tillo plankali temir no`shka  ', '95150', '30', '1', '109422.5', null, null, null);
 INSERT INTO `product_info` VALUES ('324', 'TESTING_PRODUCT', '100x10x5', 'QQ', '22-05-2023', '777000332', 'Admin', ' dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy  ', '138490', '1', '1', '119314', null, '1', 'eko kerama 0112 ikki eshikli tillo plankali temir no`shka  ', '106531', '30', '1', '119314.719726563', null, null, null);
 INSERT INTO `product_info` VALUES ('329', 'TEST_PRODUCT_OF_ID', '100x10x10', 'OQ', '23-05-2023', '777000333', 'Admin', ' PVS PVS PVS PVS PVS PVS PVS PVS PVS PVS PVS PVS', '336604', '20000', '101', '37803196', null, '10', 'eko kerama 0112 ikki eshikli tillo plankali temir no`shka  ', '258926', '30', '1', '378031.9609375', null, null, null);
-INSERT INTO `product_info` VALUES ('330', 'TEST_ID_OF_PRODUCT', '100x10x10', 'AD', '27-05-2023', '777000335', 'Admin', ' laminat laminat laminat laminat laminat laminat laminat laminat laminat laminat laminat', '110410', '2121211', '132', '16367903', null, '11', 'eko kerama 0112 ikki eshikli tillo plankali temir no`shka  ', '386531', null, '0', '110410', null, null, null);
+INSERT INTO `product_info` VALUES ('330', 'TEST_ID_OF_PRODUCT', '100x10x10', 'AD', '27-05-2023', '777000335', 'Admin', ' laminat laminat laminat laminat laminat laminat laminat laminat laminat laminat laminat', '110410', '2121211', '131', '16367903', null, '11', 'eko kerama 0112 ikki eshikli tillo plankali temir no`shka  ', '386531', null, '0', '110410', null, null, null);
 INSERT INTO `product_info` VALUES ('331', 'SONGI_SINOV', '100x1401x01x1x', 'OQQ', '24-05-2023', '777000336', 'Admin', ' terishga xizmat xaqqi  terishga xizmat xaqqi  terishga xizmat xaqqi  terishga xizmat xaqqi  terishga xizmat xaqqi  terishga xizmat xaqqi  terishga xizmat xaqqi ', '21199', '100000', '25', '595205', null, '100', 'ikki eshikli antik och mat', '16307', '30', '1', '23808.2202148438', null, null, null);
 INSERT INTO `product_info` VALUES ('332', 'ooo', '2121', '21', '24-05-2023', '777000337', 'Admin', ' PVS PVS PVS PVS PVS PVS PVS PVS', '271502', '12', '20', '6403279', null, '10', 'ikki eshikli antik och mat', '208848', '30', '1', '304918.078125', null, null, null);
 INSERT INTO `product_info` VALUES ('333', 'QIRIQ ESHIKILI_SHKAF', '100x10x10', 'OQ', '24-05-2023', '777000339', 'Admin', ' dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy  ', '228296', '100000', '10', '2563935', null, '10', '0118 eko k', '175612', '30', '1', '256393.5234375', null, null, null);
@@ -2024,8 +2027,8 @@ CREATE TABLE `sell` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
-  `price` varchar(200) DEFAULT NULL,
-  `allprice` varchar(200) DEFAULT NULL,
+  `price` int(200) DEFAULT NULL,
+  `allprice` int(200) DEFAULT NULL,
   `bar_code` varchar(255) DEFAULT NULL,
   `chek_id` int(11) DEFAULT NULL,
   `sizes` varchar(255) DEFAULT NULL,
@@ -2036,9 +2039,10 @@ CREATE TABLE `sell` (
   `p_id` int(11) DEFAULT NULL,
   `buyer` varchar(255) DEFAULT NULL,
   `old_debt` int(11) DEFAULT NULL,
-  `status_id` int(11) DEFAULT NULL,
+  `foiz` int(11) DEFAULT NULL,
+  `tan_narx` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sell
@@ -2066,115 +2070,118 @@ CREATE TABLE `selling` (
   `month` int(11) DEFAULT NULL,
   `buyer` varchar(255) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
-  `status_id` int(11) DEFAULT NULL,
+  `foiz` int(11) DEFAULT NULL,
+  `tan_narx` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of selling
 -- ----------------------------
-INSERT INTO `selling` VALUES ('1', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('2', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('3', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('4', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('5', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('6', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('7', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('8', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('9', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('10', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('11', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('12', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('13', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('14', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('15', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('16', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null);
-INSERT INTO `selling` VALUES ('17', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null);
-INSERT INTO `selling` VALUES ('18', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null);
-INSERT INTO `selling` VALUES ('19', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null);
-INSERT INTO `selling` VALUES ('20', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null);
-INSERT INTO `selling` VALUES ('21', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null);
-INSERT INTO `selling` VALUES ('22', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null);
-INSERT INTO `selling` VALUES ('23', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('24', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('25', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('26', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('27', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('28', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('29', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('30', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('31', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('32', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('33', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('34', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('35', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('36', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('37', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null);
-INSERT INTO `selling` VALUES ('38', 'IKKI  ESIKLIK  SERI  KASPERISKIY  ', '2', '150000', '300000', '777000163', '144', '80/80/40', 'SERI  KASPERISKIY ', 'Nurmuhammad', 'LAMINAT', '8000', '180', '2023-02-05', '2', 'HOJI TOG`A vastroy', null, null);
-INSERT INTO `selling` VALUES ('39', 'IKKI  ESIKLIK  SERI  KASPERISKIY  ', '2', '150000', '300000', '777000163', '144', '80/80/40', 'SERI  KASPERISKIY ', 'Nurmuhammad', 'LAMINAT', '8000', '180', '2023-02-05', '2', 'HOJI TOG`A vastroy', null, null);
-INSERT INTO `selling` VALUES ('40', 'SANITA  LAGUNA 65sm  OQ  GULSIZ  UZUN   G`ALADON  NIKKIL  PLANKA TEMIR  NOSHKA ODDY  MILATI', '2', '340000', '680000', '777000266', '145', '80/61/34', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '278', '2023-02-05', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('41', 'EKOKERAMA  0116  OQ  75sm  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '650000', '650000', '777000085', '146', '80/75/565', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '20000', '102', '2023-02-05', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('42', 'DNEPRO  KERAMIKA  IZOYA  85 sm  UZUN  G`ALADON  GULSIZ  TEMIR OSHKA  ODDIT  MILATI', '2', '440000', '880000', '777000080', '147', '815/80/36', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '97', '2023-02-05', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('43', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  2 ESHIKLIK  TEMIR  NOSHKALIK  ', '1', '300000', '300000', '777000117', '148', '80/605/295', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '135', '2023-02-05', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('44', 'SANITA  LAGUNA  65sm  OQ  GULSIZ  2 ESHIKLIK  TEMIR  NO`SHKALIK  ', '1', '300000', '300000', '777000098', '149', '80/61/34', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '116', '2023-02-05', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('45', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null);
-INSERT INTO `selling` VALUES ('46', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null);
-INSERT INTO `selling` VALUES ('47', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null);
-INSERT INTO `selling` VALUES ('48', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null);
-INSERT INTO `selling` VALUES ('49', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null);
-INSERT INTO `selling` VALUES ('50', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null);
-INSERT INTO `selling` VALUES ('51', 'eski qarzi ', '1', '1657000', '1657000', null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `selling` VALUES ('52', 'eski qarzi ', '1', '3725000', '3725000', null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `selling` VALUES ('53', 'eski qarzi ', '1', '1000000', '1000000', null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `selling` VALUES ('54', 'eski qarzi ', '1', '2050000', '2050000', null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `selling` VALUES ('55', 'eski qarzi ', '1', '640000', '640000', null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `selling` VALUES ('56', 'eski qarzi ', '1', '600000', '600000', null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `selling` VALUES ('57', 'eski qarzi ', '1', '736000', '736000', '777000287', '158', '450450', 'kkk', 'Admin', 'kkk', '20', '292', '2023-02-08', '2', 'farxot aka po`lsha tashqari', null, null);
-INSERT INTO `selling` VALUES ('58', 'SANTINO`1170/70 SM OQ KICHIK G`ALADON TEMIR NO`SHKA ODDIY MILATIY  ', '1', '400000', '400000', '777000073', '159', '80/68/46/', 'OQ ', 'Admin', 'MDF LAMINAT', '10000', '90', '2023-02-08', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('59', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('60', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('61', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('62', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('63', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('64', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('65', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('66', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('67', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('68', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null);
-INSERT INTO `selling` VALUES ('69', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '162', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('70', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '162', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('71', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '162', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('72', 'EKOKERAMA 0113 OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '3', '330000', '990000', '777000045', '163', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '58', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('73', 'EKOKERAMA 0113 OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '3', '330000', '990000', '777000045', '163', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '58', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('74', 'EKOKERAMA 0113 OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '3', '330000', '990000', '777000045', '163', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '58', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('75', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '164', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('76', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '164', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('77', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '164', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null);
-INSERT INTO `selling` VALUES ('78', 'EKOKERAMA  0113  OQ  2 ESHIKLIK  GULSIZ  TEMIR  NOSHKALIK', '5', '280000', '1400000', '777000043', '165', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '7000', '56', '2023-02-11', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('79', 'EKOKERAMA  0118  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NOSHKALIK  ODDIY  MILATI ', '2', '330000', '660000', '777000120', '166', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '138', '2023-02-11', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('80', 'EKOKERAMA  0113  OQ  UZUN G`ALADON  TILLO  PLANKALIK  TEMIR  NO`SHKALIK  ODDIY  MILATI', '5', '345000', '1725000', '777000041', '167', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '54', '2023-02-12', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('81', 'EKOKERAMA  0113  OQ  UZUN G`ALADON  TILLO  PLANKALIK  TEMIR  NO`SHKALIK  ODDIY  MILATI', '5', '345000', '1725000', '777000041', '167', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '54', '2023-02-12', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('82', 'EKOKERAMA  0112  2 ESHIKLIK TILLO  PLANKALIK TRMIR  NOSHKA  ODDIY  MILATI', '5', '310000', '1550000', '777000035', '168', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '7000', '48', '2023-02-12', '2', 'Begzot aka ovvol', null, null);
-INSERT INTO `selling` VALUES ('83', 'EKOKERAMA  0112  2 ESHIKLIK TILLO  PLANKALIK TRMIR  NOSHKA  ODDIY  MILATI', '5', '310000', '1550000', '777000035', '168', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '7000', '48', '2023-02-12', '2', 'Begzot aka ovvol', null, null);
-INSERT INTO `selling` VALUES ('84', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '169', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Begzot aka ovvol', null, null);
-INSERT INTO `selling` VALUES ('85', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '169', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Begzot aka ovvol', null, null);
-INSERT INTO `selling` VALUES ('86', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '169', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Begzot aka ovvol', '-', null);
-INSERT INTO `selling` VALUES ('87', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '170', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'farxot aka po`lsha tashqari', null, null);
-INSERT INTO `selling` VALUES ('88', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '171', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'farxot aka po`lsha tashqari', null, null);
-INSERT INTO `selling` VALUES ('89', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '172', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'sinash uchun klent ', null, null);
-INSERT INTO `selling` VALUES ('90', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '173', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'Abduraxim po`lsha bozor', null, null);
-INSERT INTO `selling` VALUES ('91', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '174', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'farxot aka po`lsha tashqari', null, null);
-INSERT INTO `selling` VALUES ('92', 'SAS  80sm OQ  GULSIZ  2 ESHIKLIK  TILLO  PLANKALIK  TEMIR  NOSHKALIK  ', '7', '440000', '3080000', '777000106', '175', '80/77/445', 'OQ', 'Abdujalil', 'MDF/LAMINAT', '10000', '124', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null);
-INSERT INTO `selling` VALUES ('93', 'SAS  80sm OQ  GULSIZ  2 ESHIKLIK  TILLO  PLANKALIK  TEMIR  NOSHKALIK  ', '7', '440000', '3080000', '777000106', '175', '80/77/445', 'OQ', 'Abdujalil', 'MDF/LAMINAT', '10000', '124', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null);
-INSERT INTO `selling` VALUES ('94', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '176', '80/60/32/', 'oq', 'Abdujalil', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null);
-INSERT INTO `selling` VALUES ('95', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '176', '80/60/32/', 'oq', 'Abdujalil', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null);
-INSERT INTO `selling` VALUES ('96', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '176', '80/60/32/', 'oq', 'Abdujalil', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null);
-INSERT INTO `selling` VALUES ('97', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '177', '80/60/32/', 'oq', 'Zoxidjon', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Xayrullo aka vadl ', null, null);
-INSERT INTO `selling` VALUES ('98', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '177', '80/60/32/', 'oq', 'Zoxidjon', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Xayrullo aka vadl ', '-', null);
-INSERT INTO `selling` VALUES ('99', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '177', '80/60/32/', 'oq', 'Zoxidjon', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Xayrullo aka vadl ', '-', null);
-INSERT INTO `selling` VALUES ('100', 'EKOKERAMA  0118  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NOSHKALIK  ODDIY  MILATI ', '3', '330000', '990000', '777000120', '178', '80/55/41', 'OQ', 'Zoxidjon', 'MDF/LAMINAT', '10000', '138', '2023-02-12', '2', 'Xayrullo aka vadl ', null, null);
-INSERT INTO `selling` VALUES ('101', 'IKKI  ESHIkLIK platina gl ', '1', '150000', '150000', '777000060', '179', '80/80/40', 'PLATINA  ', 'Admin', 'LAMINAT', '8000', '74', '2023-05-24', '5', 'sinash uchun klent ', '-', null);
-INSERT INTO `selling` VALUES ('102', 'TEST_TOVAR_2405', '1', '50215', '50215', '777000340', '180', '100x10x10', 'Oq', 'Admin', ' dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy  ', '100000', '334', '2023-06-06', '6', 'Abduraxim po`lsha bozor', null, '0');
+INSERT INTO `selling` VALUES ('1', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('2', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('3', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('4', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('5', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('6', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('7', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('8', 'IKKI ESHIKLIK  SERI', '1', '150000', '150000', '777000070', '139', '80\\80\\40', 'seriiy', 'Nurmuhammad', 'laminat', '8000', '85', '2023-02-04', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('9', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('10', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('11', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('12', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('13', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('14', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('15', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('16', 'IKKI  ESHIKLIK luna mramr ', '1', '150000', '150000', '777000054', '140', '80/80/40', 'LUNA  mramr ', 'Admin', 'LAMINAT', '8000', '68', '2023-02-04', '2', 'ISMOYIL AKA KOTTA ', null, null, null);
+INSERT INTO `selling` VALUES ('17', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null, null);
+INSERT INTO `selling` VALUES ('18', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null, null);
+INSERT INTO `selling` VALUES ('19', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null, null);
+INSERT INTO `selling` VALUES ('20', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null, null);
+INSERT INTO `selling` VALUES ('21', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null, null);
+INSERT INTO `selling` VALUES ('22', 'BIR  ESHIKLIK  SASNA  ASTANA  ', '1', '118000', '118000', '777000159', '141', '80/50/40', '  SASNA  ASTANA', 'Admin', 'LAMINAT', '6000', '176', '2023-02-04', '2', 'NEMAT AKA PO`LSHA ', null, null, null);
+INSERT INTO `selling` VALUES ('23', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('24', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('25', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('26', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('27', 'G`ALADONLI PKART GL ', '1', '230000', '230000', '777000029', '142', '80x80x40', 'PKART GL ', 'Nurmuhammad', 'laminat ', '16000', '39', '2023-02-05', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('28', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('29', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('30', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('31', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('32', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('33', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('34', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('35', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('36', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('37', 'KICHKINA  BIR  ESHKLIK SERI', '9', '115000', '1035000', '777000026', '143', '80x50x40', 'seri', 'Admin', 'LAMINAT', '6000', '36', '2023-02-05', '2', 'Fozilxon namangan', null, null, null);
+INSERT INTO `selling` VALUES ('38', 'IKKI  ESIKLIK  SERI  KASPERISKIY  ', '2', '150000', '300000', '777000163', '144', '80/80/40', 'SERI  KASPERISKIY ', 'Nurmuhammad', 'LAMINAT', '8000', '180', '2023-02-05', '2', 'HOJI TOG`A vastroy', null, null, null);
+INSERT INTO `selling` VALUES ('39', 'IKKI  ESIKLIK  SERI  KASPERISKIY  ', '2', '150000', '300000', '777000163', '144', '80/80/40', 'SERI  KASPERISKIY ', 'Nurmuhammad', 'LAMINAT', '8000', '180', '2023-02-05', '2', 'HOJI TOG`A vastroy', null, null, null);
+INSERT INTO `selling` VALUES ('40', 'SANITA  LAGUNA 65sm  OQ  GULSIZ  UZUN   G`ALADON  NIKKIL  PLANKA TEMIR  NOSHKA ODDY  MILATI', '2', '340000', '680000', '777000266', '145', '80/61/34', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '278', '2023-02-05', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('41', 'EKOKERAMA  0116  OQ  75sm  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '650000', '650000', '777000085', '146', '80/75/565', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '20000', '102', '2023-02-05', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('42', 'DNEPRO  KERAMIKA  IZOYA  85 sm  UZUN  G`ALADON  GULSIZ  TEMIR OSHKA  ODDIT  MILATI', '2', '440000', '880000', '777000080', '147', '815/80/36', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '97', '2023-02-05', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('43', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  2 ESHIKLIK  TEMIR  NOSHKALIK  ', '1', '300000', '300000', '777000117', '148', '80/605/295', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '135', '2023-02-05', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('44', 'SANITA  LAGUNA  65sm  OQ  GULSIZ  2 ESHIKLIK  TEMIR  NO`SHKALIK  ', '1', '300000', '300000', '777000098', '149', '80/61/34', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '116', '2023-02-05', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('45', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('46', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('47', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('48', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('49', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('50', 'SANITA  FEST  80sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TILLO  PLANKA  TEMIR  NOSHKA  ODDIY  MILATI', '1', '460000', '460000', '777000130', '150', '80/765/43', 'OQ', 'Baxromjon', 'MDF/LAMINAT', '10000', '148', '2023-02-07', '2', 'Elyorbe po`lsha bozor tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('51', 'eski qarzi ', '1', '1657000', '1657000', null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `selling` VALUES ('52', 'eski qarzi ', '1', '3725000', '3725000', null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `selling` VALUES ('53', 'eski qarzi ', '1', '1000000', '1000000', null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `selling` VALUES ('54', 'eski qarzi ', '1', '2050000', '2050000', null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `selling` VALUES ('55', 'eski qarzi ', '1', '640000', '640000', null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `selling` VALUES ('56', 'eski qarzi ', '1', '600000', '600000', null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `selling` VALUES ('57', 'eski qarzi ', '1', '736000', '736000', '777000287', '158', '450450', 'kkk', 'Admin', 'kkk', '20', '292', '2023-02-08', '2', 'farxot aka po`lsha tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('58', 'SANTINO`1170/70 SM OQ KICHIK G`ALADON TEMIR NO`SHKA ODDIY MILATIY  ', '1', '400000', '400000', '777000073', '159', '80/68/46/', 'OQ ', 'Admin', 'MDF LAMINAT', '10000', '90', '2023-02-08', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('59', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('60', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('61', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('62', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('63', 'EKOKERAMA  0113  60sm  OQ  GULSIZ  UZUN  G`ALADONLIK  TEMIR  NOSHKALIK  ODDIY  MILATI', '1', '330000', '330000', '777000118', '160', '80/605/295', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '136', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('64', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('65', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('66', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('67', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('68', 'SAS  80sm OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NOSHKA  ODDIY  MILATI', '1', '440000', '440000', '777000212', '161', '80/77/445', 'OQ', 'Admin', 'MDF/LAMINAT', '10000', '227', '2023-02-11', '2', 'MUHAMMADALI ESHONGUZAR', null, null, null);
+INSERT INTO `selling` VALUES ('69', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '162', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('70', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '162', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('71', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '162', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('72', 'EKOKERAMA 0113 OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '3', '330000', '990000', '777000045', '163', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '58', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('73', 'EKOKERAMA 0113 OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '3', '330000', '990000', '777000045', '163', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '58', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('74', 'EKOKERAMA 0113 OQ  GULSIZ  KICHIK  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '3', '330000', '990000', '777000045', '163', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '58', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('75', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '164', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('76', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '164', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('77', 'EKOKERAMA  0118  60sm  OQ  GULSIZ  2 ERSHIKLIK  TEMIR  NOSHKALIK  ', '6', '300000', '1800000', '777000109', '164', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '127', '2023-02-11', '2', 'Nodiraka sklad beshbola', null, null, null);
+INSERT INTO `selling` VALUES ('78', 'EKOKERAMA  0113  OQ  2 ESHIKLIK  GULSIZ  TEMIR  NOSHKALIK', '5', '280000', '1400000', '777000043', '165', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '7000', '56', '2023-02-11', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('79', 'EKOKERAMA  0118  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NOSHKALIK  ODDIY  MILATI ', '2', '330000', '660000', '777000120', '166', '80/55/41', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '138', '2023-02-11', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('80', 'EKOKERAMA  0113  OQ  UZUN G`ALADON  TILLO  PLANKALIK  TEMIR  NO`SHKALIK  ODDIY  MILATI', '5', '345000', '1725000', '777000041', '167', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '54', '2023-02-12', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('81', 'EKOKERAMA  0113  OQ  UZUN G`ALADON  TILLO  PLANKALIK  TEMIR  NO`SHKALIK  ODDIY  MILATI', '5', '345000', '1725000', '777000041', '167', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '54', '2023-02-12', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('82', 'EKOKERAMA  0112  2 ESHIKLIK TILLO  PLANKALIK TRMIR  NOSHKA  ODDIY  MILATI', '5', '310000', '1550000', '777000035', '168', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '7000', '48', '2023-02-12', '2', 'Begzot aka ovvol', null, null, null);
+INSERT INTO `selling` VALUES ('83', 'EKOKERAMA  0112  2 ESHIKLIK TILLO  PLANKALIK TRMIR  NOSHKA  ODDIY  MILATI', '5', '310000', '1550000', '777000035', '168', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '7000', '48', '2023-02-12', '2', 'Begzot aka ovvol', null, null, null);
+INSERT INTO `selling` VALUES ('84', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '169', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Begzot aka ovvol', null, null, null);
+INSERT INTO `selling` VALUES ('85', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '169', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Begzot aka ovvol', null, null, null);
+INSERT INTO `selling` VALUES ('86', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '169', '80/60/32/', 'oq', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Begzot aka ovvol', '-', null, null);
+INSERT INTO `selling` VALUES ('87', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '170', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'farxot aka po`lsha tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('88', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '171', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'farxot aka po`lsha tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('89', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '172', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'sinash uchun klent ', null, null, null);
+INSERT INTO `selling` VALUES ('90', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '173', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'Abduraxim po`lsha bozor', null, null, null);
+INSERT INTO `selling` VALUES ('91', 'EKOKERAMA 0112 OQ UZUN  G`ALADONLIK  GULSIZ TEMIR  NO`SHKALIK  ODDIY  MILATI ', '1', '320000', '320000', '777000015', '174', '80/60/295', 'OQ', 'Nurmuhammad', 'MDF/LAMINAT', '10000', '28', '2023-02-12', '2', 'farxot aka po`lsha tashqari', null, null, null);
+INSERT INTO `selling` VALUES ('92', 'SAS  80sm OQ  GULSIZ  2 ESHIKLIK  TILLO  PLANKALIK  TEMIR  NOSHKALIK  ', '7', '440000', '3080000', '777000106', '175', '80/77/445', 'OQ', 'Abdujalil', 'MDF/LAMINAT', '10000', '124', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null, null);
+INSERT INTO `selling` VALUES ('93', 'SAS  80sm OQ  GULSIZ  2 ESHIKLIK  TILLO  PLANKALIK  TEMIR  NOSHKALIK  ', '7', '440000', '3080000', '777000106', '175', '80/77/445', 'OQ', 'Abdujalil', 'MDF/LAMINAT', '10000', '124', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null, null);
+INSERT INTO `selling` VALUES ('94', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '176', '80/60/32/', 'oq', 'Abdujalil', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null, null);
+INSERT INTO `selling` VALUES ('95', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '176', '80/60/32/', 'oq', 'Abdujalil', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null, null);
+INSERT INTO `selling` VALUES ('96', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '176', '80/60/32/', 'oq', 'Abdujalil', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Sherali Aka bog`di oldi ', null, null, null);
+INSERT INTO `selling` VALUES ('97', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '177', '80/60/32/', 'oq', 'Zoxidjon', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Xayrullo aka vadl ', null, null, null);
+INSERT INTO `selling` VALUES ('98', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '177', '80/60/32/', 'oq', 'Zoxidjon', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Xayrullo aka vadl ', '-', null, null);
+INSERT INTO `selling` VALUES ('99', 'EKOKERAMA  0113  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NO`SHKALIK  ODDIY  MILATI', '1', '320000', '320000', '777000044', '177', '80/60/32/', 'oq', 'Zoxidjon', 'MDF/LAMINAT', '10000', '57', '2023-02-12', '2', 'Xayrullo aka vadl ', '-', null, null);
+INSERT INTO `selling` VALUES ('100', 'EKOKERAMA  0118  OQ  GULSIZ  UZUN  G`ALADON  TEMIR  NOSHKALIK  ODDIY  MILATI ', '3', '330000', '990000', '777000120', '178', '80/55/41', 'OQ', 'Zoxidjon', 'MDF/LAMINAT', '10000', '138', '2023-02-12', '2', 'Xayrullo aka vadl ', null, null, null);
+INSERT INTO `selling` VALUES ('101', 'IKKI  ESHIkLIK platina gl ', '1', '150000', '150000', '777000060', '179', '80/80/40', 'PLATINA  ', 'Admin', 'LAMINAT', '8000', '74', '2023-05-24', '5', 'sinash uchun klent ', '-', null, null);
+INSERT INTO `selling` VALUES ('102', 'TEST_TOVAR_2405', '1', '50215', '50215', '777000340', '180', '100x10x10', 'Oq', 'Admin', ' dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy   dvp prastoy  ', '100000', '334', '2023-06-06', '6', 'Abduraxim po`lsha bozor', null, '0', null);
+INSERT INTO `selling` VALUES ('103', 'TEST_ID_OF_PRODUCT', '1', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `selling` VALUES ('104', 'TEST_ID_OF_PRODUCT', '1', '77306', '77306', '777000335', '183', '100x10x10', 'AD', 'Admin', ' laminat laminat laminat laminat laminat laminat laminat laminat laminat laminat laminat', '2121211', '330', '2023-06-10', '6', 'Xayrullo aka vadl ', null, '20', '386531');
 
 -- ----------------------------
 -- Table structure for `sotilganlar`
@@ -2289,22 +2296,22 @@ CREATE TABLE `temp_product` (
   `hom_ashyo_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of temp_product
 -- ----------------------------
-INSERT INTO `temp_product` VALUES ('16', 'lipochka oq', '10', '30', '300', 'Dona', '108', '330');
-INSERT INTO `temp_product` VALUES ('17', 'yuklashga xizmat xaqqi ', '1', '500', '600', 'dona', '112', '330');
-INSERT INTO `temp_product` VALUES ('18', 'ruchka garox', '10', '2000', '20000', 'dona', '103', '330');
-INSERT INTO `temp_product` VALUES ('19', 'oq noshka plasmas ', '10', '1000', '10000', 'Dona', '105', '330');
-INSERT INTO `temp_product` VALUES ('20', 'shurup qora ', '1', '31', '31', 'Dona', '107', '330');
-INSERT INTO `temp_product` VALUES ('21', 'terishga xizmat xaqqi ', '1', '16000', '16000', 'Dona', '109', '330');
-INSERT INTO `temp_product` VALUES ('22', 'yolkira xaqqi ', '1', '10000', '10000', 'Dona', '110', '330');
-INSERT INTO `temp_product` VALUES ('23', 'dvp prastoy  ', '1', '1600', '1600', 'Dona', '111', '330');
-INSERT INTO `temp_product` VALUES ('24', 'yuklashga xizmat xaqqi ', '1', '500', '500', 'dona', '112', '330');
-INSERT INTO `temp_product` VALUES ('25', 'PVS', '1', '200000', '200000', 'Kv2', '113', '330');
-INSERT INTO `temp_product` VALUES ('26', 'laminat', '1.5', '85000', '127500', 'kv2', '100', '330');
+INSERT INTO `temp_product` VALUES ('38', 'lipochka oq', '10', '30', '300', 'Dona', '108', '330');
+INSERT INTO `temp_product` VALUES ('39', 'yuklashga xizmat xaqqi ', '1', '500', '600', 'dona', '112', '330');
+INSERT INTO `temp_product` VALUES ('40', 'ruchka garox', '10', '2000', '20000', 'dona', '103', '330');
+INSERT INTO `temp_product` VALUES ('41', 'oq noshka plasmas ', '10', '1000', '10000', 'Dona', '105', '330');
+INSERT INTO `temp_product` VALUES ('42', 'shurup qora ', '1', '31', '31', 'Dona', '107', '330');
+INSERT INTO `temp_product` VALUES ('43', 'terishga xizmat xaqqi ', '1', '16000', '16000', 'Dona', '109', '330');
+INSERT INTO `temp_product` VALUES ('44', 'yolkira xaqqi ', '1', '10000', '10000', 'Dona', '110', '330');
+INSERT INTO `temp_product` VALUES ('45', 'dvp prastoy  ', '1', '1600', '1600', 'Dona', '111', '330');
+INSERT INTO `temp_product` VALUES ('46', 'yuklashga xizmat xaqqi ', '1', '500', '500', 'dona', '112', '330');
+INSERT INTO `temp_product` VALUES ('47', 'PVS', '1', '200000', '200000', 'Kv2', '113', '330');
+INSERT INTO `temp_product` VALUES ('48', 'laminat', '1.5', '85000', '127500', 'kv2', '100', '330');
 
 -- ----------------------------
 -- Table structure for `test1`
