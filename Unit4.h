@@ -168,7 +168,7 @@ __published: // IDE-managed Components
 	TPanel *Panel19;
 	TPanel *Panel20;
 	TLabel *Label17;
-	TLabel *lamount;
+	TLabel *chiqim_label;
 	TLabel *Label30;
 	TLabel *lprice;
 	TPanel *Panel21;
@@ -309,7 +309,7 @@ __published: // IDE-managed Components
 	TLabel *Label69;
 	TPanel *Panel53;
 	TLabel *Label70;
-	TLabel *Label71;
+	TLabel *foyda_label;
 
 	void __fastcall DBGrid2CellClick(TColumn *Column);
 	void __fastcall SearchBox1Change(TObject *Sender);

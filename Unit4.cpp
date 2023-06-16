@@ -540,7 +540,7 @@ void __fastcall TForm4::SBOKClick(TObject *Sender) {
 	String name = Form1->product_infoQuery->FieldByName("name")->Text;
 	int store_amount = Form1->product_infoQuery->FieldByName("amount")
 		->AsInteger;
-	float price;
+	int price;
 	// Form1->product_infoQuery->FieldByName("price")->AsInteger;
 	String vendor = Label26->Caption;
 	String color = Form1->product_infoQuery->FieldByName("color")->Text;
@@ -554,7 +554,8 @@ void __fastcall TForm4::SBOKClick(TObject *Sender) {
 	float tan_narx = Form1->product_infoQuery->FieldByName("tan_narx")->AsFloat;
 	float foiz = StrToFloat(Label69->Caption);
 
-	price = tan_narx * foiz / 100;
+	price = floor(tan_narx * foiz / 100);
+	price += tan_narx;
 	// int status_id = IntToStr(Label69->Caption);
 
 	if (Form1->product_infoQuery->RecordCount != 0) {
@@ -1076,10 +1077,6 @@ void __fastcall TForm4::SavdoSotishClick(TObject *Sender) {
 		Form1->buyersQuery->Post();
 		// }
 
-
-
-
-
 		for (int i = 0; i < Form1->sellQuery->RecordCount; i++) {
 			Form1->sellingQuery->Insert();
 			Form1->sellingQuery->FieldByName("name")->Text =
@@ -1088,7 +1085,9 @@ void __fastcall TForm4::SavdoSotishClick(TObject *Sender) {
 				Form1->sellQuery->FieldByName("amount")->Text;
 			Form1->sellingQuery->FieldByName("price")->Text =
 				Form1->sellQuery->FieldByName("price")->Text;
-			Form1->sellingQuery->FieldByName("allprice")->Text = Form1->sellQuery->FieldByName("price")->Text * Form1->sellQuery->FieldByName("amount")->Text;
+			Form1->sellingQuery->FieldByName("allprice")->Text =
+				Form1->sellQuery->FieldByName("price")
+				->Text * Form1->sellQuery->FieldByName("amount")->Text;
 			Form1->sellingQuery->FieldByName("bar_code")->Text =
 				Form1->sellQuery->FieldByName("bar_code")->Text;
 			Form1->sellingQuery->FieldByName("chek_id")->Text = chek_id;
@@ -1483,6 +1482,12 @@ void __fastcall TForm4::Button16Click(TObject *Sender) {
 
 void __fastcall TForm4::Button18Click(TObject *Sender) {
 
+	DatePicker2->Date = Now().CurrentDate();
+
+	TDateTime selectedDate = DatePicker2->Date;
+	TDateTime newDate = selectedDate - 30;
+	DatePicker1->Date = newDate;
+
 	Form1->sellingQuery->SQL->Text =
 		"SELECT `name`, price, allprice, bar_code, chek_id, date, buyer, SUM(amount)as amount	 FROM `selling` GROUP BY `name`;";
 	Form1->sellingQuery->Open();
@@ -1604,15 +1609,19 @@ void __fastcall TForm4::Button2Click(TObject *Sender) {
 
 void __fastcall TForm4::DatePicker1Change(TObject *Sender) {
 	Form1->sellingQuery->SQL->Text =
-		"SELECT name, amount, chek_id,date, buyer,(SELECT FORMAT(price, 0))as price, (SELECT FORMAT(allprice, 0))as allprice,(SELECT FORMAT(SUM(price), 0) FROM selling WHERE date BETWEEN '" +
+		"SELECT NAME, COUNT(amount) AS amount, chek_id, date, buyer, (SELECT FORMAT(price, 0)) AS price, (SELECT FORMAT(allprice, 0)) AS allprice, ( SELECT FORMAT(SUM(tan_narx), 0) FROM selling WHERE date BETWEEN '" +
 		FormatDateTime("yyyy-mm-dd", DatePicker1->Date) + "' AND '" +
 		FormatDateTime("yyyy-mm-dd", DatePicker2->Date) +
-		"' )as JS FROM selling WHERE date BETWEEN '" + FormatDateTime
+		"' ) AS chiqim, FORMAT( SUM((price - tan_narx) * amount), 0 ) AS foyda, ( SELECT FORMAT(SUM(price), 0) FROM selling WHERE date BETWEEN '" +
+		FormatDateTime("yyyy-mm-dd", DatePicker1->Date) + "' AND '" +
+		FormatDateTime("yyyy-mm-dd", DatePicker2->Date) +
+		"' ) AS JS FROM selling WHERE date BETWEEN '" + FormatDateTime
 		("yyyy-mm-dd", DatePicker1->Date) + "' AND '" + FormatDateTime
-		("yyyy-mm-dd", DatePicker2->Date) + "'";
+		("yyyy-mm-dd", DatePicker2->Date) + "' GROUP BY `name`";
 	Form1->sellingQuery->Open();
 
-	lamount->Caption = Form1->sellingQuery->RecordCount;
+	chiqim_label->Caption = Form1->sellingQuery->FieldByName("chiqim")->Text;
+	foyda_label->Caption = Form1->sellingQuery->FieldByName("foyda")->Text;
 	lprice->Caption = Form1->sellingQuery->FieldByName("JS")->Text;
 
 }
@@ -1620,15 +1629,19 @@ void __fastcall TForm4::DatePicker1Change(TObject *Sender) {
 
 void __fastcall TForm4::DatePicker2Change(TObject *Sender) {
 	Form1->sellingQuery->SQL->Text =
-		"SELECT *, (SELECT FORMAT(SUM(price), 0) FROM selling WHERE date BETWEEN '" +
+		"SELECT NAME, COUNT(amount) AS amount, chek_id, date, buyer, (SELECT FORMAT(price, 0)) AS price, (SELECT FORMAT(allprice, 0)) AS allprice, ( SELECT FORMAT(SUM(tan_narx), 0) FROM selling WHERE date BETWEEN '" +
 		FormatDateTime("yyyy-mm-dd", DatePicker1->Date) + "' AND '" +
 		FormatDateTime("yyyy-mm-dd", DatePicker2->Date) +
-		"' )as JS FROM selling WHERE date BETWEEN '" + FormatDateTime
+		"' ) AS chiqim, FORMAT( SUM((price - tan_narx) * amount), 0 ) AS foyda, ( SELECT FORMAT(SUM(price), 0) FROM selling WHERE date BETWEEN '" +
+		FormatDateTime("yyyy-mm-dd", DatePicker1->Date) + "' AND '" +
+		FormatDateTime("yyyy-mm-dd", DatePicker2->Date) +
+		"' ) AS JS FROM selling WHERE date BETWEEN '" + FormatDateTime
 		("yyyy-mm-dd", DatePicker1->Date) + "' AND '" + FormatDateTime
-		("yyyy-mm-dd", DatePicker2->Date) + "'";
+		("yyyy-mm-dd", DatePicker2->Date) + "' GROUP BY `name`";
 	Form1->sellingQuery->Open();
 
-	lamount->Caption = Form1->sellingQuery->RecordCount;
+	chiqim_label->Caption = Form1->sellingQuery->FieldByName("chiqim")->Text;
+	foyda_label->Caption = Form1->sellingQuery->FieldByName("foyda")->Text;
 	lprice->Caption = Form1->sellingQuery->FieldByName("JS")->Text;
 }
 // ---------------------------------------------------------------------------

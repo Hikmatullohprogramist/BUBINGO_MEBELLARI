@@ -411,9 +411,6 @@ Coordinates=0,1542,49,58
 [Panel23]
 Coordinates=1391,1638,62,58
 
-[lamount]
-Coordinates=1391,252,60,58
-
 [Label40]
 Coordinates=1391,1330,60,58
 
@@ -907,4 +904,7 @@ Visible=True
 
 [Form1.]
 Coordinates=1304,1330,130,36
+
+[chiqim_label]
+Coordinates=1391,252,60,58
 

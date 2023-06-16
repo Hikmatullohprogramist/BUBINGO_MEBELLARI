@@ -123,7 +123,7 @@ object Form4: TForm4
     Width = 1024
     Height = 719
     Align = alClient
-    ActiveCard = sell_menu
+    ActiveCard = hisobotlar_menu
     BevelOuter = bvNone
     Caption = 'CardPanel1'
     TabOrder = 1
@@ -937,7 +937,7 @@ object Form4: TForm4
         end
         object SavdoSotish: TSpeedButton
           AlignWithMargins = True
-          Left = 36
+          Left = 44
           Top = 313
           Width = 244
           Height = 57
@@ -3229,21 +3229,20 @@ object Form4: TForm4
             end
             object Panel20: TPanel
               AlignWithMargins = True
-              Left = 527
+              Left = 71
               Top = 4
-              Width = 87
+              Width = 69
               Height = 92
-              Align = alRight
+              Align = alLeft
               AutoSize = True
               TabOrder = 1
               object Label17: TLabel
                 AlignWithMargins = True
                 Left = 4
                 Top = 5
-                Width = 79
+                Width = 61
                 Height = 24
-                Alignment = taRightJustify
-                Caption = 'Tan narx'
+                Caption = 'Chiqim'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -20
@@ -3251,12 +3250,11 @@ object Form4: TForm4
                 Font.Style = []
                 ParentFont = False
               end
-              object lamount: TLabel
-                Left = 51
+              object chiqim_label: TLabel
+                Left = 4
                 Top = 35
                 Width = 30
                 Height = 33
-                Alignment = taRightJustify
                 Caption = '00'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
@@ -3268,20 +3266,20 @@ object Form4: TForm4
             end
             object Panel53: TPanel
               AlignWithMargins = True
-              Left = 460
+              Left = 4
               Top = 4
               Width = 61
               Height = 92
-              Align = alRight
+              Align = alLeft
               AutoSize = True
               TabOrder = 2
+              ExplicitLeft = 460
               object Label70: TLabel
                 AlignWithMargins = True
                 Left = 4
                 Top = 5
                 Width = 53
                 Height = 24
-                Alignment = taRightJustify
                 Caption = 'Foyda'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
@@ -3290,12 +3288,11 @@ object Form4: TForm4
                 Font.Style = []
                 ParentFont = False
               end
-              object Label71: TLabel
-                Left = 25
+              object foyda_label: TLabel
+                Left = 4
                 Top = 35
                 Width = 30
                 Height = 33
-                Alignment = taRightJustify
                 Caption = '00'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
